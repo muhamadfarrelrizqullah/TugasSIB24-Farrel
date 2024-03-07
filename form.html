@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Biodata</title>
+    <link rel="stylesheet" href="css/FormStyle.css">
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="/">
+            <div class="banner">
+
+            </div>
+
+            <div class="item">
+                <p>Nama</p>
+                <div class="name-item">
+                    <input type="text" name="First" placeholder="Nama awal" />
+                    <input type="text" name="Last" placeholder="Nama akhir" />
+                </div>
+            </div>
+
+            <div class="item">
+                <p>Email</p>
+                <input type="text" name="name" placeholder="Email aktif" />
+            </div>
+
+            <div class="item">
+                <p>No HP</p>
+                <input type="text" name="name" placeholder="No HP aktif" />
+            </div>
+
+            <div class="radio-item">
+                <p>Jenis Kelamin</p>
+                <div class="radio-item">
+                    <input type="radio" value="none" id="radio_1" name="driving" />
+                    <label for="radio_1" class="radio"><span>Laki laki</span></label>
+                    <input type="radio" value="none" id="radio_2" name="driving" />
+                    <label for="radio_2" class="radio"><span>Perempuan</span></label>
+                </div>
+            </div>
+
+            <div class="item">
+                <p>Prodi</p>
+                <select>
+                    <option value="" disabled selected>Pilih</option>
+                    <option value="1">Manajemen Informatika</option>
+                    <option value="2">Teknik Informatika</option>
+                    <option value="3">Sistem Informasi Manajemen</option>
+                    <option value="4">Rekayasa Perangkat Lunak</option>
+                    <option value="5">Komputerisasi Akuntansi</option>
+                    <option value="6">Sistem Informasi</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <p>Hobi</p>
+                <div class="checkbox-item">
+                    <input type="checkbox" value="membaca" id="checkbox_1" name="membaca" />
+                    <label for="checkbox_1" class="checkbox"><span>Membaca</span></label>
+                    <input type="checkbox" value="menulis" id="checkbox_2" name="menulis" />
+                    <label for="checkbox_2" class="checkbox"><span>Menulis</span></label>
+                    <input type="checkbox" value="menyanyi" id="checkbox_3" name="menyanyi" />
+                    <label for="checkbox_3" class="checkbox"><span>Menyanyi</span></label>
+                    <input type="checkbox" value="olahraga" id="checkbox_4" name="olahraga" />
+                    <label for="checkbox_4" class="checkbox"><span>Olahraga</span></label>
+                </div>
+            </div>
+
+            <div class="item">
+                <p>Alamat</p>
+                <textarea rows="3" placeholder="Alamat lengkap"></textarea>
+            </div>
+
+            <div class="item">
+                <p>Foto Diri</p>
+                <input type="file">
+            </div>
+
+            <div class="btn-block">
+                <button type="submit" href="/">Daftar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
