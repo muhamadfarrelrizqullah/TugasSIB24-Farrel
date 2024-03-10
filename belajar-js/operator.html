@@ -26,10 +26,61 @@
    <section>
     <div class="main">
         <h1>Belajar Fundamental JS</h1>
-        <p>Muhamad Farrel Rizqullah</p>
-        <p class="exp">Operator</p>
+        <p class="title">1. Operator Aritmatika</p>
+            <p class="exp">Operator aritmatika adalah operator yang dapat digunakan untuk
+              melakukan operasi aritmatika seperti penjumlahan, pembagian,
+              perkalian dan sebagainya.</p>
+            <p class="input"> <strong>Contoh penerapan operator aritmatika : </strong> <br>
+              let a = 6 <br>
+              let b = 3 <br>
+              var mainDiv = document.querySelector('.main .output') <br>
+              mainDiv.innerHTML = "Penjumlahan: " + (a+b) + "Pengurangan: " + (a-b) + "Perkalian: " + (a*b) + "Pangkat: " + (a**b) + "Pembagian: " + (a/b) + "Modulus: " + (a%b)</p>
+            <p class="output"></p>
+
+            <p class="title">2. Operator Perbandingan</p>
+            <p class="exp">Operator Relasi/ Perbandingan dapat
+              digunakan untuk membandingkan
+              dua nilai.Operator perbandingan akan
+              menghasilkan salah satu dari nilai
+              true atau false.</p>
+            <p class="input"> <strong>Contoh penerapan operator perbandingan : </strong> <br>
+              let c = 4 <br>
+              let d = 7 <br>
+              var mainDiv = document.querySelector('.main .output2') <br>
+              mainDiv.innerHTML = "Sama dengan: " + (c==d) + "Kurang dari: " + (c &lt; d) + "Lebih dari: " + (c &gt; d) + "Tidak sama dengan: " + (c!=d) </p>
+            <p class="output2"></p>
+
+            <p class="title">3. Operator Logika</p>
+            <p class="exp">Merupakan operator yang dapat
+              digunakan untuk operasi terhadap
+              dua nilai boolean.</p>
+            <p class="input"> <strong>Contoh penerapan operator logika : </strong> <br>
+              let e = 3 <br>
+              let f = 5 <br>
+              var mainDiv = document.querySelector('.main .output3') <br>
+              mainDiv.innerHTML = "And: " + (e&&f) + "OR: " + (e||f) + "Negasi: " + (!e) </p>
+            <p class="output3"></p>
+
+            <p class="title">4. Operator Bitwise</p>
+            <p class="exp">Operator bitwise merupakan operator yang digunakan untuk operasi berdasarkan bit (biner).</p>
+            <p class="input"> <strong>Contoh penerapan operator bitwise : </strong> <br>
+              let g = 3<br>
+              let h = 5 <br>
+              var mainDiv = document.querySelector('.main .output4') <br>
+              mainDiv.innerHTML = "And: " + (g&h) + "OR: " + (g|h) + "XOR: " + (g^h) + "Negasi: " + (~g)  </p>
+            <p class="output4"></p>
+
+            <p class="title">5. Operator Ternary</p>
+            <p class="exp">Operator ternary merupakan operator yang terdiri dari tiga bagian (kiri,
+              tengah dan kanan).</p>
+            <p class="input"> <strong>Contoh penerapan operator ternary : </strong> <br>
+              let i = 3 <br>
+              let j = 5 <br>
+              var mainDiv = document.querySelector('.main .output5') <br>
+              mainDiv.innerHTML = "Hasil operator ternary: " + (i==j ? 'sama' : 'tidak sama') </p>
+            <p class="output5"></p>
       </div>
    </section>
   </body>
-
+<script src="../js/operator.js"></script>
 </html>

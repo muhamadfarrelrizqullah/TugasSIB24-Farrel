@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Belajar JS</title>
     <link rel="stylesheet" href="../css/JsDasar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <input type="checkbox" id="check">
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>Sidebar</header>
-    <ul>
-     <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
-     <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
-     <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
-     <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
-     <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
-     <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
-     <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
-    </ul>
-   </div>
-   <section>
-    <div class="main">
-        <h1>Belajar Fundamental JS</h1>
-        <p>Muhamad Farrel Rizqullah</p>
-        <p class="exp">Konversi</p>
-      </div>
-   </section>
-  </body>
+        <header>Sidebar</header>
+        <ul>
+            <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
+            <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
+            <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
+            <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
+            <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
+            <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
+            <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="main">
+            <h1>Belajar Fundamental JS</h1>
+            <p class="title">1. Tipe Konversi String</p>
+            <p class="exp">Konversi ke tipe data String biasanya diperlukan saat membutuhkan
+                nilai yang berbentuk String.</p>
+            <p class="input"> <strong>Contoh penerapan tipe konversi string : </strong> <br>
+                let value = false <br>
+                let string = String(value) <br>
+                var mainDiv = document.querySelector('.main .output') <br>
+                mainDiv.innerHTML = "Value: " + value</p>
+            <p class="output"></p>
+
+            <p class="title">2. Tipe Konversi Numeric</p>
+            <p class="exp">Sebagai contoh jika kita melakukan operasi pembagian kepada
+                bilangan non-numeric maka akan dihasilkan tipe data numeric.</p>
+            <p class="input"> <strong>Contoh penerapan tipe konversi numeric : </strong> <br>
+                let str = "123" <br>
+                let nbr = Number(str) <br>
+                var mainDiv = document.querySelector('.main .output2') <br>
+                mainDiv.innerHTML = "Number: " + nbr </p>
+            <p class="output2"></p>
+
+            <p class="title">3. Tipe Konversi Boolean</p>
+            <p class="exp">Konversi Boolean memiliki aturan sebagai berikut: Nilai 0, String yang kosong, null,
+                undefined, and NaN, menjadi false. Selain itu menjadi true.</p>
+            <p class="input"> <strong>Contoh penerapan tipe konversi boolean : </strong> <br>
+                var mainDiv = document.querySelector('.main .output3') <br>
+                mainDiv.innerHTML = "Boolean(0): " + Boolean(0) +" Boolean(1): " + Boolean(1) </p>
+            <p class="output3"></p>
+        </div>
+    </section>
+</body>
+<script src="../js/konversi.js"></script>
 
 </html>

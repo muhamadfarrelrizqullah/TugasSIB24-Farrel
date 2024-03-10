@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Belajar JS</title>
     <link rel="stylesheet" href="../css/JsDasar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <input type="checkbox" id="check">
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>Sidebar</header>
-    <ul>
-     <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
-     <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
-     <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
-     <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
-     <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
-     <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
-     <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
-    </ul>
-   </div>
-   <section>
-    <div class="main">
-        <h1>Belajar Fundamental JS</h1>
-        <p>Muhamad Farrel Rizqullah</p>
-        <p class="exp">Pop Up</p>
-      </div>
-   </section>
-  </body>
+        <header>Sidebar</header>
+        <ul>
+            <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
+            <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
+            <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
+            <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
+            <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
+            <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
+            <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="main">
+            <h1>Belajar Fundamental JS</h1>
+            <p class="title">1. Popup Alert</p>
+            <p class="exp">Alert biasa digunakan untuk menampilkan pesan dan untuk mendapatkan
+                perhatian dari pengguna.</p>
+            <p class="input"> <strong>Contoh penerapan popup alert : </strong> <br>
+                alert('Halo Selamat Datang di Arkatama')</p>
+            <button class="popup" onclick="tampilkanAlert()">Tampilkan Alert</button>
+
+            <p class="title">2. Popup Prompt</p>
+            <p class="exp">Prompt sering digunakan jika kita ingin pengguna menginputkan sebuah
+                nilai terlebih dahulu sebelum memasuki sebuah halaman.</p>
+            <p class="input"> <strong>Contoh penerapan popup prompt : </strong> <br>
+                let string = prompt("Apakah kamu mau makan malam denganku?")<br>
+                alert('Jawaban anda ' + string) </p>
+            <button class="popup" onclick="tampilkanPrompt()">Tampilkan Prompt</button>
+
+            <p class="title">3. Popup Confirm</p>
+            <p class="exp">Confirm digunakan untuk menampilkan pesan konfirmasi kepada
+                pengguna. Confirm box menampilkan pesan dengan dua buah tombol “OK” dan
+                “CANCEL”.</p>
+            <p class="input"> <strong>Contoh penerapan popup confirm : </strong> <br>
+                let string2 = confirm("Apakah kamu mau makan malam denganku?") <br>
+                string2 ? alert('Jawaban anda mau') : alert('Jawaban anda tidak mau') </p>
+            <button class="popup" onclick="tampilkanConfirm()">Tampilkan Confirm</button>
+        </div>
+    </section>
+</body>
+<script src="../js/popup.js"></script>
 
 </html>

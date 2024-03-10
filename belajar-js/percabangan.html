@@ -1,36 +1,89 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Belajar JS</title>
     <link rel="stylesheet" href="../css/JsDasar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <input type="checkbox" id="check">
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>Sidebar</header>
-    <ul>
-     <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
-     <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
-     <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
-     <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
-     <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
-     <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
-     <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
-    </ul>
-   </div>
-   <section>
-    <div class="main">
-        <h1>Belajar Fundamental JS</h1>
-        <p>Muhamad Farrel Rizqullah</p>
-        <p class="exp">Percabangan</p>
-      </div>
-   </section>
-  </body>
+        <header>Sidebar</header>
+        <ul>
+            <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
+            <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
+            <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
+            <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
+            <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
+            <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
+            <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="main">
+            <h1>Belajar Fundamental JS</h1>
+            <p class="title">1. Percabangan IF</p>
+            <p class="exp">Sebuah statement if(…) mengevaluasi kondisi di dalam “(…)”. Jika hasil evaluasinya adalah
+                true maka akan mengeksekusi kode program
+                di dalam blok if. Jika evaluasinya false maka akan dilewati.</p>
+            <p class="input"> <strong>Contoh penerapan percabangan if : </strong> <br>
+                let string = confirm("Apakah kamu mau makan malam denganku?")<br>
+                if(string) {<br>
+                alert('Jawaban anda mau')}</p>
+            <button class="popup" onclick="percabanganIf()">Percabangan IF</button>
+
+            <p class="title">2. Percabangan IF-ELSE</p>
+            <p class="exp">Kita dapat menggunakan klausa else untuk menjalankan program jika
+                kondisi pada evaluasi if adalah false.</p>
+            <p class="input"> <strong>Contoh penerapan percabangan if-else : </strong> <br>
+                let string2 = confirm("Apakah kamu mau makan malam denganku?")<br>
+                if(string2) {<br>
+                alert('Jawaban anda mau')<br>
+                } else {<br>
+                alert('Jawaban anda tidak mau')} </p>
+            <button class="popup" onclick="percabanganIfElse()">Percabangan IF-ELSE</button>
+
+            <p class="title">3. Percabangan ELSE-IF</p>
+            <p class="exp">Kita dapat menggunakan else if jika terdapat beberapa kondisi yang perlu
+                dilakukan evaluasi.</p>
+            <p class="input"> <strong>Contoh penerapan percabangan else-if : </strong> <br>
+                let string3 = prompt("1 + 1 ?") <br>
+                if(string3 == 2) { <br>
+                alert('Jawaban anda betul') <br>
+                } else if(string3 &gt; 2) { <br>
+                alert('Jawaban anda kelebihan') <br>
+                } else if(string3 &lt; 2) { <br>
+                alert('Jawaban anda kurang') <br>
+                } else { <br>
+                alert('Jawaban anda salah')} </p>
+            <button class="popup" onclick="percabanganElseIF()">Percabangan ELSE-IF</button>
+
+            <p class="title">4. Percabangan Switch</p>
+            <p class="exp">Switch dapat digunakan untuk menggantikan if else yang memiliki banyak
+                percabangan sehingga lebih deskriptif untuk membandingkan banyak
+                variansi nilai.</p>
+            <p class="input"> <strong>Contoh penerapan percabangan switch : </strong> <br>
+                let string4 = "blue" <br>
+                switch(string4){ <br>
+                case 'red': <br>
+                alert('I love red!') <br>
+                break; <br>
+                case 'blue': <br>
+                alert('I love blue!') <br>
+                break; <br>
+                default: <br>
+                alert('I dont know what color is!') <br>
+                break;} </p>
+            <button class="popup" onclick="percabanganSwitch()">Percabangan Switch</button>
+        </div>
+    </section>
+</body>
+<script src="../js/percabangan.js"></script>
 
 </html>

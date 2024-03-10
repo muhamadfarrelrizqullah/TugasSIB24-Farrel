@@ -1,35 +1,117 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Belajar JS</title>
     <link rel="stylesheet" href="../css/JsDasar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <input type="checkbox" id="check">
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>Sidebar</header>
-    <ul>
-     <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
-     <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
-     <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
-     <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
-     <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
-     <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
-     <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
-    </ul>
-   </div>
-   <section>
-    <div class="main">
-        <h1>Belajar Fundamental JS</h1>
-        <p>Muhamad Farrel Rizqullah</p>
-        <p class="exp">Tipe Data</p>
-      </div>
-   </section>
-  </body>
+        <header>Sidebar</header>
+        <ul>
+            <li><a href="variabel.html"><i class="fas fa-qrcode"></i>Variabel</a></li>
+            <li><a href="tipedata.html"><i class="fas fa-link"></i>Tipe Data</a></li>
+            <li><a href="konversi.html"><i class="fas fa-stream"></i>Tipe Konversi</a></li>
+            <li><a href="operator.html"><i class="fas fa-calendar-week"></i>Operator</a></li>
+            <li><a href="popup.html"><i class="far fa-question-circle"></i>Pop Up</a></li>
+            <li><a href="percabangan.html"><i class="fas fa-sliders-h"></i>Percabangan</a></li>
+            <li><a href="perulangan.html"><i class="far fa-envelope"></i>Perulangan</a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="main">
+            <h1>Belajar Fundamental JS</h1>
+            <p class="title">1. Tipe Data Number</p>
+            <p class="exp">Data type atau tipe data dalam bahasa pemrograman adalah
+                sebuah klasifikasi yang menentukan suatu tipe dari nilai. Tipe data number dalam Javascript digunakan
+                untuk
+                mempresentasikan integer (bilangan bulat) dan float (bilangan
+                pecahan).</p>
+            <p class="input"> <strong>Contoh penerapan tipe data number : </strong> <br>
+                let bulat =25 <br>
+                let desimal = 25.5 <br>
+                var mainDiv = document.querySelector('.main .output') <br>
+                mainDiv.innerHTML = "Bulat: " + bulat + " Desimal: " + desimal + " Hasil: " + (desimal+bulat)</p>
+            <p class="output"></p>
+
+            <p class="title">2. Tipe Data Bignt</p>
+            <p class="exp">Dalam Javascript tipe data number tidak bisa mempresentasikan
+                bilangan bulat lebih dari (253-1) dengan kata lain bernilai
+                9007199254740991 atau untuk bilangan negatif - (253-1).</p>
+            <p class="input"> <strong>Contoh penerapan tipe data bigint : </strong> <br>
+                let bulat2 =2515627288299283883993838930399399202933n <br>
+                var mainDiv = document.querySelector('.main .output2') <br>
+                mainDiv.innerHTML = "Bulat: " + bulat2 </p>
+            <p class="output2"></p>
+
+            <p class="title">3. Tipe Data String</p>
+            <p class="exp">Tipe data string atau text adalah tipe data yang berisikan kumpulan
+                kosong atau lebih karakter.</p>
+            <p class="input"> <strong>Contoh penerapan tipe data string : </strong> <br>
+                let text = "Arkatama"<br>
+                var mainDiv = document.querySelector('.main .output3')<br>
+                mainDiv.innerHTML = "Text: " + text </p>
+            <p class="output3"></p>
+
+            <p class="title">4. Tipe Data Boolean</p>
+            <p class="exp">Tipe data boolean adalah tipe data yang berisikan data kebenaran,
+                artinya hanya ada dua data, benar dan salah (yes atau no).</p>
+            <p class="input"> <strong>Contoh penerapan tipe data boolean : </strong> <br>
+                let perbandingan = 1 > 7 <br>
+                var mainDiv = document.querySelector('.main .output4') <br>
+                mainDiv.innerHTML = "Perbandingan: " + perbandingan </p>
+            <p class="output4"></p>
+
+            <p class="title">5. Tipe Data Undefined</p>
+            <p class="exp">Merupakan nilai khusus yang merepresentasikan bahwa sebuah
+                variabel belum memiliki nilai yang di-assign terhadapnya.</p>
+            <p class="input"> <strong>Contoh penerapan tipe data undefined : </strong> <br>
+                let admin <br>
+                var mainDiv = document.querySelector('.main .output5') <br>
+                mainDiv.innerHTML = "Admin: " + admin </p>
+            <p class="output5"></p>
+
+            <p class="title">6. Tipe Data Null</p>
+            <p class="exp">Null merupakan sebuah nilai khusus yang bukan milik tipe data
+                apapun.</p>
+            <p class="input"> <strong>Contoh penerapan tipe data null : </strong> <br>
+                let admin2 = null <br>
+                var mainDiv = document.querySelector('.main .output6') <br>
+                mainDiv.innerHTML = "Admin: " + admin2 </p>
+            <p class="output6"></p>
+
+            <p class="title">7. Tipe Data Symbol</p>
+            <p class="exp">Tipe data symbol digunakan untuk sesuatu yang bernilai unik dan
+                tidak dapat diubah (immutable).</p>
+            <p class="input"> <strong>Contoh penerapan tipe data symbol : </strong> <br>
+                let employee = Symbol('joko') <br>
+                var mainDiv = document.querySelector('.main .output7') <br>
+                mainDiv.innerHTML = "Karyawan: " + employee.description </p>
+            <p class="output7"></p>
+
+            <p class="title">8. Tipe Data Object</p>
+            <p class="exp">Tipe data khusus yang terdiri dari pasangan kunci dan nilai
+                (key-value pair).</p>
+            <p class="input"> <strong>Contoh penerapan tipe data object : </strong> <br>
+                let employee2 = { <br>
+                name: "john", <br>
+                age: 25, <br>
+                job: "Fullstack Web Dev" <br>
+                } <br>
+                var mainDiv = document.querySelector('.main .output8') <br>
+                mainDiv.innerHTML = "Nama: " + employee2.name + " Umur: " + employee2.age + " Job: " + employee2.job
+            </p>
+            <p class="output8"></p>
+        </div>
+    </section>
+</body>
+<script src="../js/tipedata.js"></script>
 
 </html>
