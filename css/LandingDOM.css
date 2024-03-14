@@ -1,0 +1,32 @@
+#logoslider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content;
+    margin: 0px 50px;
+}
+
+#logoslider li {
+    flex: 0 0 auto;
+}
+
+.img-wrapper {
+    margin: 0px 20px;
+}
+
+.img-wrapper img {
+    width: 70%;
+}
+
+.reversed {
+    animation: reverse 0.5s ease;
+}
+
+@keyframes reverse {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
