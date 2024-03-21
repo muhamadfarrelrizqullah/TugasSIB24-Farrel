@@ -1,121 +1,70 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // fungsi post data from  via HTTP GET
-    const postData = async (url = '', data = {}) => {
-        const response = await fetch(url, {
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        return response.json();
-    }
-
-    // fungsi get data from  via HTTP GET
-    const getDataFromMockAPI = async () => {
-        const response = await fetch('https://65fa8ec13909a9a65b1ab0a5.mockapi.io/foods');
-        return response.json();
-    }
-
-    // fungsi tampilan data di tabel
-    const displayDataInTable = (data) => {
-        const tableBody = document.querySelector('#dataTable tbody');
-        tableBody.innerHTML = ''; // Clear previous table rows
-
-        data.forEach(product => {
-            const newRow = tableBody.insertRow();
-
-            const idCell = newRow.insertCell(0);
-            const nameCell = newRow.insertCell(1);
-            const priceCell = newRow.insertCell(2);
-
-            idCell.textContent = product.id;
-            nameCell.textContent = product.name;
-            priceCell.textContent = product.price;
-        });
-    };
-
-    // fungsi post data ke mockapi
-    const postToMockAPI = async (product) => {
-        try {
-            const response = await postData('https://65fa8ec13909a9a65b1ab0a5.mockapi.io/foods',
-                product);
-            console.log('Data successfully posted:', response);
-            updateTable(product);
-        } catch (error) {
-            console.error('Error posting data:', error);
-        }
-    }
-
-    // fungsi mengambil data dari mockapi
-    const updateTable = async (product) => {
-        await displayDataInTable(await getDataFromMockAPI());
-    };
-
-    // membuat event listener untuk post data
-    document.getElementById('postButton').addEventListener('click', async () => {
-        // const products = [{
-        //         "name": "Soto",
-        //         "price": 12000,
-        //         "id": "1"
-        //     },
-        //     {
-        //         "name": "Rawon",
-        //         "price": 15000,
-        //         "id": "2"
-        //     },
-        //     {
-        //         "name": "Bakso",
-        //         "price": 10000,
-        //         "id": "3"
-        //     },
-        //     {
-        //         "name": "Pecel",
-        //         "price": 10000,
-        //         "id": "4"
-        //     },
-        //     {
-        //         "name": "Bebek",
-        //         "price": 15000,
-        //         "id": "5"
-        //     }
-        // ];
-
-        const products = [{
-                "name": "Ayam",
-                "price": 12000,
-                "id": "1"
+document.getElementById("postButton").addEventListener("click", function () {
+    var konten = {
+        konten: [
+            {
+                name: "Koloke",
+                price: 12000
             },
             {
-                "name": "Lele",
-                "price": 10000,
-                "id": "2"
+                name: "Capjay",
+                price: 15000
             },
             {
-                "name": "Capjay",
-                "price": 10000,
-                "id": "3"
+                name: "Nasi Goreng",
+                price: 10000
             },
             {
-                "name": "Koloke",
-                "price": 20000,
-                "id": "4"
+                name: "Pecel Tumpang",
+                price: 10000
             },
             {
-                "name": "Jeroan",
-                "price": 12000,
-                "id": "5"
+                name: "Tahu Telor",
+                price: 15000
             }
-        ];
+        ]
+    };
 
+    var linkss = "https://crudcrud.com/api/a710e8135b424a49a673e6f7c159de4b/products";
 
-        for (const product of products) {
-            await postToMockAPI(product);
-        }
-    });
+    function SendAPITOServer(links, content) {
+        fetch(links, {
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            method: 'POST',
+            body: JSON.stringify(
+                content)
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+    }
 
-    // memanggil fungsi get
-    displayDataInTable(getDataFromMockAPI());
+    SendAPITOServer(linkss, konten);
 });
+
+function getDataFromAPI(apiURL) {
+    fetch(apiURL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const tableBody = document.querySelector("#dataTable tbody");
+            tableBody.innerHTML = "";
+            data.forEach(item => {
+                item.konten.forEach(product => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>${product.price}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+const apiURL = "https://crudcrud.com/api/a710e8135b424a49a673e6f7c159de4b/products";
+getDataFromAPI(apiURL);
