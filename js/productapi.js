@@ -1,4 +1,29 @@
 document.getElementById("postButton").addEventListener("click", function () {
+    // var konten = {
+    //     konten: [
+    //         {
+    //             name: "Soto",
+    //             price: 12000
+    //         },
+    //         {
+    //             name: "Rawon",
+    //             price: 15000
+    //         },
+    //         {
+    //             name: "Bakso",
+    //             price: 10000
+    //         },
+    //         {
+    //             name: "Pecel",
+    //             price: 10000
+    //         },
+    //         {
+    //             name: "Bebek",
+    //             price: 15000
+    //         }
+    //     ]
+    // };
+
     var konten = {
         konten: [
             {
@@ -24,7 +49,7 @@ document.getElementById("postButton").addEventListener("click", function () {
         ]
     };
 
-    var linkss = "https://crudcrud.com/api/a710e8135b424a49a673e6f7c159de4b/products";
+    var linkss = "https://crudcrud.com/api/29d87b694cd74d1c860b768e9959df2b/products";
 
     function SendAPITOServer(links, content) {
         fetch(links, {
@@ -66,5 +91,5 @@ function getDataFromAPI(apiURL) {
         .catch(error => console.error('Error fetching data:', error));
 }
 
-const apiURL = "https://crudcrud.com/api/a710e8135b424a49a673e6f7c159de4b/products";
+const apiURL = "https://crudcrud.com/api/29d87b694cd74d1c860b768e9959df2b/products";
 getDataFromAPI(apiURL);
