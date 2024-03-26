@@ -1,0 +1,29 @@
+#card {
+    margin-bottom: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+#btn-detail {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+@media (max-width: 576px) {
+    #card {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+}

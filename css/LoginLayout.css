@@ -18,28 +18,32 @@ background-position: 0 50%;
 }
 }
 
+
 @media (max-width: 376px) {
-    .h1{
-        font-size: 26px !important;
-    }
+body {
+min-width: 376px;
+}
+.h1{
+font-size: 26px !important;
+}
 
-    .login-box-msg{
-        font-size: 12px !important;
-    }
+.login-box-msg{
+font-size: 12px !important;
+}
 
-    .remember{
-        font-size: 10px !important;
-    }
+.remember{
+font-size: 10px !important;
+}
 
-    .text-white{
-        font-size: 12px !important;
-    }
+.text-white{
+font-size: 12px !important;
+}
 
-    #bt{
-        font-size: 12px !important;
-    }
+#bt{
+font-size: 12px !important;
+}
 
-    #forgot{
-        font-size: 12px !important;
-    }
+#forgot{
+font-size: 12px !important;
+}
 }
